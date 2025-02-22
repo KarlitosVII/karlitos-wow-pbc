@@ -2,7 +2,7 @@
     "releases": [
         {
             "name":"PetBattleCooldowns",
-            "version":"11.0.01",
+            "version":"1.0.0",
             "filename": "PetBattleCooldowns-1.0.0",
             "nolib": false,
             "metadata": [
