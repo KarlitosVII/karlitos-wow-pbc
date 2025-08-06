@@ -107,14 +107,14 @@ jobs:
         if: ${{ env.MY_FILENAME != env.CURSE_FILENAME }}
         run: |
           cd PetBattleCooldowns/
-          echo "get_addon_version=$(cat *.toc | sed -n -E -e 's/^## Version: ([a-zA-Z0-9.-]+).*/\1/p')" >> "$GITHUB_OUTPUT"
+          echo "get_addon_version=$(cat PetBattleCooldowns.toc | sed -n -E -e 's/^## Version: ([a-zA-Z0-9.-]+).*/\1/p')" >> "$GITHUB_OUTPUT"
 
       - name: Get Interface Version Number
         id: get_interface_version_num
         if: ${{ env.MY_FILENAME != env.CURSE_FILENAME }}
         run: |
           cd PetBattleCooldowns/
-          echo "get_interface_version_num=$(cat *.toc | sed -n -E -e 's/^## Interface: ([0-9]+).*/\1/p')" >> "$GITHUB_OUTPUT"
+          echo "get_interface_version_num=$(cat PetBattleCooldowns.toc | sed -n -E -e 's/^## Interface: ([0-9]+).*/\1/p')" >> "$GITHUB_OUTPUT"
 
       - name: Update release.json
         if: ${{ env.MY_FILENAME != env.CURSE_FILENAME }}
